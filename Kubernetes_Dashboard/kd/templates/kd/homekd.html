@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kubernetes Dashboard Home Page</title>
+</head>
+<body>
+    {% for pod in pods %}
+        <h1>{{ pod.name }}</h1>
+        <p>Pod status is : <span style="color: #ff0000">{{ pod.phase }}</span></p>
+        <p>Pod image is : {{ pod.image }}</p>
+        <p>Pod logs are as follow : {{ pod.logs }}</p>
+    {% endfor %}
+</body>
+</html>
